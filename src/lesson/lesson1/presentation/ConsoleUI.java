@@ -1,6 +1,9 @@
 package lesson.lesson1.presentation;
 
 import lesson.lesson1.controller.ToyController;
+import lesson.lesson1.model.Toy;
+import lesson.lesson1.model.ToyAgeCategory;
+import lesson.lesson1.model.ToyCategory;
 
 import java.util.Scanner;
 
@@ -40,7 +43,8 @@ public class ConsoleUI {
                     System.out.println("Delete toy");
                     break;
                 case 4:
-                    System.out.println("Print all toys");
+                    System.out.println("Print all toys...");
+                    toyController.printAllToys();
                     break;
                 case 5:
                     System.out.println("Exit");
@@ -51,6 +55,7 @@ public class ConsoleUI {
             }
         }
     }
+
 }
 
 

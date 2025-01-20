@@ -12,8 +12,8 @@ import java.util.Scanner;
 public class ToysShopApp {
     public static void main(String[] args) {
         ConsoleUI consoleUI = new ConsoleUI();
-        //consoleUI.start();
-        Toy barbie = new Toy(ToyCategory.DOLL, ToyAgeCategory.MIDDLE, "Marie", 4.9);
+        consoleUI.start();
+        /*Toy barbie = new Toy(ToyCategory.DOLL, ToyAgeCategory.MIDDLE, "Marie", 4.9);
         Toy puzzle = new Toy(ToyCategory.PUZZLE, ToyAgeCategory.LARGE, "London", 3.9);
         System.out.println(barbie.toString());
         List<Toy> toys = new ArrayList<>();
@@ -22,5 +22,7 @@ public class ToysShopApp {
         System.out.println(toys);
         toys.add(puzzle);
         System.out.println(toys);
+
+         */
     }
 }

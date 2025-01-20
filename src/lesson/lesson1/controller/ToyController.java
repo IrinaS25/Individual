@@ -1,10 +1,12 @@
 package lesson.lesson1.controller;
 
+import lesson.lesson1.model.Toy;
 import lesson.lesson1.model.ToyAgeCategory;
 import lesson.lesson1.model.ToyCategory;
 import lesson.lesson1.repository.ToyRepository;
 import lesson.lesson1.service.ToyService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ToyController {
@@ -29,6 +31,10 @@ public class ToyController {
         System.out.println("Enter toy price: ");
         double price = scanner.nextDouble();
         scanner.nextLine();
+
+        Toy toy = new Toy(toyCategory, toyAgeCategory, name, price);
+        toyService.addToy(toy);
+        System.out.println(toy);
     }
 
     private ToyCategory getCategory (int num) {
@@ -71,4 +77,18 @@ public class ToyController {
         return toyAgeCategory;
 
     }
-}
+    public   void printAllToys () {
+        List<Toy> allToys = toyService.getAllToys();
+
+        if (!allToys.isEmpty()) {
+            for (Toy toy : allToys) {
+                System.out.println(toy);
+            }
+            }else {
+                System.out.println("There are no toys");
+            }
+        }
+
+
+    }
+

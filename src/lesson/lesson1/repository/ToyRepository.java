@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToyRepository {
+
     private ArrayList<Toy> toys = new ArrayList<>();
 
     public void addToy (Toy toy) {
